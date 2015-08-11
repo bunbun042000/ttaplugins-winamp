@@ -1,4 +1,4 @@
-in_tta.dll Ver3.2 Modified(Beta23) 
+ttaplugins-winamp v3.2 Modified(Beta24) 
 =====================================================
 
 *This plugin 
@@ -16,9 +16,11 @@ This plugin performs Winamp Ver.2.9 or newer and tested by Winamp Ver.5.666.
  Please copy in_tta.dll and enc_tta.dll to Plugins folder in Winamp.
 
 *Release Notes
+2015-08-12 Beta24 Code cleanup(in_tta.dll)
+                  Code cleanup(enc_tta.dll)
 2015-08-11 Beta23 Change native Unicode compile(in_tta.dll)
                   Detach each plugin (in_tta and enc_tta)
-				  2015-08-11 Beta22 Fix saves AlbumArt in in_tta.dll
+2015-08-11 Beta22 Fix saves AlbumArt in in_tta.dll
 2015-08-11 Beta21 Add enc_tta.dll
                   Fix some transcoding issue in in_tta.dll
 				  Detach libtta from in_tta.dll. Use libtta.dll

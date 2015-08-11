@@ -1,6 +1,6 @@
 /*
-The ttaplugin-winamp project.
-Copyright (C) 2005-2013 Yamagata Fumihiro
+The ttaplugins-winamp project.
+Copyright (C) 2005-2015 Yamagata Fumihiro
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
@@ -21,12 +21,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 #define VERSIONNO_H
 
 #define BASE_VERSION "v3.2"
-#define EXTENDED_VERSION "Beta23"
+#define EXTENDED_VERSION "Beta24"
 #define COPYRIGHT_YEARS "2005-2015"
 #define VERSION BASE_VERSION " " EXTENDED_VERSION
 
-#define FILEVER    3,2,23,1
-#define PRODUCTVER 3,2,23,1
+#define FILEVER    3,2,24,1
+#define PRODUCTVER 3,2,24,1
 #define STRFILEVER    VERSION "\0"
 #define STRPRODUCTVER STRFILEVER
 #define COPYRIGHT_IN_TTA     BASE_VERSION ", (C)2005 Alexander Djourik. All rights reserved. " EXTENDED_VERSION " (C)" COPYRIGHT_YEARS " Yamagta Fumihiro. All right reserved."
