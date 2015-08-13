@@ -8,6 +8,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "enc_tta", "enc_tta\enc_tta.vcxproj", "{7B6322E9-14BD-4DC2-92B0-9EC0A1E8AA3A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "common", "common\common.vcxproj", "{B479CE23-6DCA-4CF3-A3CB-E9833F4BFC62}"
+	ProjectSection(ProjectDependencies) = postProject
+		{67DE0204-5F5F-48A7-93F8-9D403EB9CEE0} = {67DE0204-5F5F-48A7-93F8-9D403EB9CEE0}
+		{7B6322E9-14BD-4DC2-92B0-9EC0A1E8AA3A} = {7B6322E9-14BD-4DC2-92B0-9EC0A1E8AA3A}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

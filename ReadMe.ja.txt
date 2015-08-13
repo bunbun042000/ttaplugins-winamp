@@ -1,4 +1,4 @@
-﻿ttaplugins-winamp v3.2 (Beta24) 
+﻿ttaplugins-winamp v3.2 (Beta25) 
 =====================================================
 
 *このプラグインは
@@ -14,6 +14,9 @@ Winamp Ver2.9以降に対応しており，Winamp Ver.5.666にて動作確認し
  WinampのフォルダにあるPluginsフォルダにin_tta.dllとenc_tta.dllをコピーしてください。
 
 *更新履歴
+2015-08-13 Beta25 エンコード時ファイルの末尾が不正となっている問題を修正(enc_tta.dll)
+                  正しいファイル名を取得するためにトランスコーディング用関数名を修正(in_tta.dll)
+				  コードの見直し(in_tta.dll)
 2015-08-12 Beta24 コードの見直し(in_tta.dll)
                   コードの見直し(enc_tta.dll)
 2015-08-11 Beta23 ネイティブUnicode版に変更(in_tta.dll)
