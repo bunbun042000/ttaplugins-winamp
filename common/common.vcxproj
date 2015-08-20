@@ -80,7 +80,7 @@
     </Link>
     <PostBuildEvent>
       <Command>"$(ProgramFiles)\NSIS\makensis" /V1 "$(SolutionDir)NSIS\ttaplugins-winamp_installer_debug.nsi"
-"$(SolutionDir)NSIS\$(SolutionName)_v3_2_Beta24_debug.exe" /S</Command>
+"$(SolutionDir)NSIS\$(SolutionName)_v3_2_Beta26_debug.exe" /S</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

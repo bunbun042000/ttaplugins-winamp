@@ -21,12 +21,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 #define VERSIONNO_H
 
 #define BASE_VERSION "v3.2"
-#define EXTENDED_VERSION "Beta25"
+#define EXTENDED_VERSION "Beta26"
 #define COPYRIGHT_YEARS "2005-2015"
 #define VERSION BASE_VERSION " " EXTENDED_VERSION
 
-#define FILEVER    3,2,25,1
-#define PRODUCTVER 3,2,25,1
+#define FILEVER    3,2,26,1
+#define PRODUCTVER 3,2,26,1
 #define STRFILEVER    VERSION "\0"
 #define STRPRODUCTVER STRFILEVER
 #define COPYRIGHT_IN_TTA     BASE_VERSION ", (C)2005 Alexander Djourik. All rights reserved. " EXTENDED_VERSION " (C)" COPYRIGHT_YEARS " Yamagta Fumihiro. All right reserved."
