@@ -13,10 +13,11 @@
 ; Header Files
 ; not used in this case but handy when scaling up to multiple sections
 ; !include "Sections.nsh"
+!include ..\common\VersionNo.h
 
 ; common defines for a generic DrO installer :o)
-!define VERSION "3.2 Beta26 debug"
-!define ALT_VER "3_2_Beta26_debug"
+!define VERSION "${BASE_VERSION} Beta${EXTENDED_VERSION} debug"
+!define ALT_VER "3_2_Beta${EXTENDED_VERSION}_debug"
 !define PLUG "ttaplugins-winamp"
 !define PLUG_ALT "ttaplugins-winamp"
 !define IN_PLUG_FILE "in_tta"
@@ -31,10 +32,10 @@ SetCompressor lzma
 Name "${PLUG} v${VERSION}"
 
 ; The file to write based on the filename and version
-OutFile "${PLUG_ALT}_v${ALT_VER}.exe"
+OutFile "${PLUG_ALT}_debug.exe"
 ; you could alter it to output you plugin installers into a common location
 ; to make it easier to maintain them
-; OutFile "../_Installers/${PLUG_ALT}_v${ALT_VER}.exe"
+; OutFile "../_Installers/${PLUG_ALT}_debug.exe"
 
 ; license file
 LicenseData "../lgpl.txt"

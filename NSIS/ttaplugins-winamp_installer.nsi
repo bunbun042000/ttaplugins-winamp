@@ -13,10 +13,11 @@
 ; Header Files
 ; not used in this case but handy when scaling up to multiple sections
 ; !include "Sections.nsh"
+!include ..\common\VersionNo.h
 
 ; common defines for a generic DrO installer :o)
-!define VERSION "3.2 Beta26"
-!define ALT_VER "3_2_Beta26"
+!define VERSION "${BASE_VERSION} Beta${EXTENDED_VERSION}"
+!define ALT_VER "3_2_Beta${EXTENDED_VERSION}"
 !define PLUG "ttaplugins-winamp"
 !define PLUG_ALT "ttaplugins-winamp"
 !define IN_PLUG_FILE "in_tta"
