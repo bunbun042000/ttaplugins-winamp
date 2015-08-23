@@ -1,4 +1,4 @@
-ttaplugins-winamp v3.2 Modified(Beta26) 
+ttaplugins-winamp v3.2 Modified(Beta27) 
 =====================================================
 
 *This plugin 
@@ -16,6 +16,7 @@ This plugin performs Winamp Ver.2.9 or newer and tested by Winamp Ver.5.666.
  Please copy in_tta.dll and enc_tta.dll to Plugins folder in Winamp.
 
 *Release Notes
+2015-08-24 Beta27 Reduce number of accessing file at getting meta data(in_tta.dll)
 2015-08-20 Beta26 Fix CPU overload because of accessing file at getting meta data(in_tta.dll)
 2015-08-13 Beta25 Fix encoder was creating incomplete tta file(enc_tta.dll)
                   Fix function name for valid filename in trans coding(in_tta.dll)
