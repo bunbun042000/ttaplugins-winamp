@@ -16,6 +16,7 @@ This plugin performs Winamp Ver.2.9 or newer and tested by Winamp Ver.5.666.
  Please copy in_tta.dll and enc_tta.dll to Plugins folder in Winamp.
 
 *Release Notes
+2015-08-24 Beta29 Change playing decode engine to ttaplugin-winamp-3.5 base version(in_tta.dll)
 2015-08-24 Beta28 Change libtta.dll to enable SSE4 version(libtta.dll)
 2015-08-24 Beta27 Reduce number of accessing file at getting meta data(in_tta.dll)
 2015-08-20 Beta26 Fix CPU overload because of accessing file at getting meta data(in_tta.dll)
