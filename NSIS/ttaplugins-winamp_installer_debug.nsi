@@ -17,7 +17,7 @@
 
 ; common defines for a generic DrO installer :o)
 !define VERSION "${BASE_VERSION} Beta${EXTENDED_VERSION} debug"
-!define ALT_VER "3_2_Beta${EXTENDED_VERSION}_debug"
+!define ALT_VER "3_5_Beta${EXTENDED_VERSION}_debug"
 !define PLUG "ttaplugins-winamp"
 !define PLUG_ALT "ttaplugins-winamp"
 !define IN_PLUG_FILE "in_tta"
@@ -29,7 +29,7 @@
 SetCompressor lzma
 
 ; The name of the installer based on the filename and version
-Name "${PLUG} v${VERSION}"
+Name "${PLUG} ${VERSION}"
 
 ; The file to write based on the filename and version
 OutFile "${PLUG_ALT}_debug.exe"

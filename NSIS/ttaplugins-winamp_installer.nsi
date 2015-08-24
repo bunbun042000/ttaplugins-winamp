@@ -17,7 +17,7 @@
 
 ; common defines for a generic DrO installer :o)
 !define VERSION "${BASE_VERSION} Beta${EXTENDED_VERSION}"
-!define ALT_VER "3_2_Beta${EXTENDED_VERSION}"
+!define ALT_VER "v3_5_Beta${EXTENDED_VERSION}"
 !define PLUG "ttaplugins-winamp"
 !define PLUG_ALT "ttaplugins-winamp"
 !define IN_PLUG_FILE "in_tta"
@@ -31,10 +31,10 @@
 SetCompressor lzma
 
 ; The name of the installer based on the filename and version
-Name "${PLUG} v${VERSION}"
+Name "${PLUG} ${VERSION}"
 
 ; The file to write based on the filename and version
-OutFile "${PLUG_ALT}_v${ALT_VER}.exe"
+OutFile "${PLUG_ALT}_${ALT_VER}.exe"
 ; you could alter it to output you plugin installers into a common location
 ; to make it easier to maintain them
 ; OutFile "../_Installers/${PLUG_ALT}_v${ALT_VER}.exe"
