@@ -114,7 +114,7 @@ Section ""
   File "..\Debug\${IN_PLUG_FILE}.dll"
   File "..\Debug\${ENC_PLUG_FILE}.dll"
   SetOutPath "$INSTDIR"
-  File "..\..\libraries\bin\${LIBTTA_DLL}.dll"
+  ;File "..\..\libraries\bin\${LIBTTA_DLL}.dll"
   File "..\..\libraries\bin\${TAGLIB_DLL}.dll"
 
   SetOverwrite off

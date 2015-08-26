@@ -1,4 +1,4 @@
-﻿ttaplugins-winamp v3.2 (Beta29) 
+﻿ttaplugins-winamp v3.2 (Beta30) 
 =====================================================
 
 *このプラグインは
@@ -14,7 +14,8 @@ Winamp Ver2.9以降に対応しており，Winamp Ver.5.666にて動作確認し
  WinampのフォルダにあるPluginsフォルダにin_tta.dllとenc_tta.dllをコピーしてください。
 
 *更新履歴
-2015-08-24 Beta29 再生用デコードエンジンをttaplugin-winamp-3.5 ベースに変更(in_tta.dll)
+2015-08-27 Beta30 トランスコーディングの動作不能を修正(in_tta)
+2015-08-24 Beta29 再生用デコードエンジンをlibtta-cpp-2.3ベースからttaplugin-winamp-3.5 ベースに変更(in_tta.dll)
 2015-08-24 Beta28 同梱のlibtta.dllをSSE4対応版に変更(libtta.dll)
 2015-08-24 Beta27 メタデータ読み込み時のファイルアクセス回数をさらに削減(in_tta.dll)
 2015-08-20 Beta26 メタデータ読み込み時のファイルアクセス回数を削減(in_tta.dll)

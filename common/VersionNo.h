@@ -25,7 +25,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 /**/BASE_VERSION "v3.5"
 #define /*
 !define /**/ /*\
-/**/EXTENDED_VERSION 29
+/**/EXTENDED_VERSION 30
 
 #ifndef MAKESTR
 #define _MAKESTR(s) #s
@@ -35,8 +35,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 #define COPYRIGHT_YEARS "2005-2015"
 #define VERSION BASE_VERSION " Beta" MAKESTR(EXTENDED_VERSION)
 
-#define FILEVER    3,5,EXTENDED_VERSION,1
-#define PRODUCTVER 3,5,EXTENDED_VERSION,1
+#define FILEVER    3,5,EXTENDED_VERSION,0
+#define PRODUCTVER 3,5,EXTENDED_VERSION,0
 #define STRFILEVER    VERSION "\0"
 #define STRPRODUCTVER STRFILEVER
 #define COPYRIGHT_IN_TTA     BASE_VERSION ", (C)2005 Alexander Djourik. All rights reserved. Beta" MAKESTR(EXTENDED_VERSION) " (C)" COPYRIGHT_YEARS " Yamagta Fumihiro. All right reserved."
@@ -44,7 +44,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 #define PLUGIN_VERSION VERSION
 
 #define  PROJECT_URL "<https://github.com/bunbun042000/ttaplugin-winamp>"
-#define  LIBTTA_VERSION "libtta++2.3"
 #define  ORIGINAL_CREADIT01 L"Plugin is written by Alexander Djourik, Pavel Zhilin and Anton Gorbunov.\n"
 #define  ORIGINAL_CREADIT02 "Copyright (c) 2003 Alexander Djourik.\n"
 #define  ORIGINAL_CREADIT03 "All rights reserved.\n"
