@@ -34,7 +34,7 @@ SetCompressor lzma
 Name "${PLUG} ${VERSION}"
 
 ; The file to write based on the filename and version
-OutFile "${PLUG_ALT}_${ALT_VER}.exe"
+OutFile "${PLUG_ALT}_v${ALT_VER}.exe"
 ; you could alter it to output you plugin installers into a common location
 ; to make it easier to maintain them
 ; OutFile "../_Installers/${PLUG_ALT}_v${ALT_VER}.exe"
