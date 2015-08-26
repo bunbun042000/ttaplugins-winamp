@@ -1,4 +1,4 @@
-ttaplugins-winamp v3.2 Modified(Beta28) 
+ttaplugins-winamp v3.2 Modified(Beta29) 
 =====================================================
 
 *This plugin 
