@@ -1,4 +1,4 @@
-﻿ttaplugins-winamp v3.2 (Beta31) 
+﻿ttaplugins-winamp v3.5 (Beta31) 
 =====================================================
 
 *このプラグインは
@@ -6,7 +6,6 @@
 taglib(https://github.com/taglib/taglib)をベースとした
 メディアライブラリ読み込み対応を付け加え、ID3v2周りを改変したものです。
 またアルバムアートなどメディアライブラリのメタデータ読み込み機能を付加しました。
-Beta9以降はデコードエンジンをTTA encoder/decoder/decoder multiplatform library, C++ version (http://en.true-audio.com/)に変更しました。
 Winamp Ver2.9以降に対応しており，Winamp Ver.5.666にて動作確認しています。
 
 

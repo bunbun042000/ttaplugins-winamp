@@ -1,15 +1,12 @@
-ttaplugins-winamp v3.2 Modified(Beta31) 
+ttaplugins-winamp v3.5 Modified(Beta31) 
 =====================================================
 
 *This plugin 
 is based on TAU Software(http://en.true-audio.com/)
-TTA plug-in ver 3.2 for Winamp 2,5.
+TTA plug-in ver 3.5 for Winamp 2,5.
 The modification is ID3v2 Tag read/write function using 
 taglib(https://github.com/taglib/taglib).
 And add read metadata (include album art) for MediaLibray.
-From Beta9, decode engine was replaced by
-TTA encoder/decoder/decoder multiplatform library, C++ version
-(http://en.true-audio.com/)
 This plugin performs Winamp Ver.2.9 or newer and tested by Winamp Ver.5.666.
 
 *Install
