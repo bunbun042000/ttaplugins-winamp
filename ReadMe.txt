@@ -1,4 +1,4 @@
-ttaplugins-winamp v3.2 Modified(Beta30) 
+ttaplugins-winamp v3.2 Modified(Beta31) 
 =====================================================
 
 *This plugin 
@@ -16,6 +16,8 @@ This plugin performs Winamp Ver.2.9 or newer and tested by Winamp Ver.5.666.
  Please copy in_tta.dll and enc_tta.dll to Plugins folder in Winamp.
 
 *Release Notes
+2015-08-27 Beta31 Fix saving of tag data(in_tta)
+                  Change showing overall bitrate to instantaneous bit rate in player(in_tta)
 2015-08-27 Beta30 Fix transcoding(in_tta)
 2015-08-24 Beta29 Change playing decode engine from libtta-cpp-2.3 to ttaplugin-winamp-3.5 base version(in_tta.dll)
 2015-08-24 Beta28 Change libtta.dll to enable SSE4 version(libtta.dll)
