@@ -16,13 +16,14 @@
 !include ..\common\VersionNo.h
 
 ; common defines for a generic DrO installer :o)
-!define VERSION "${BASE_VERSION} Beta${EXTENDED_VERSION} debug"
-!define ALT_VER "3_5_Beta${EXTENDED_VERSION}_debug"
+!define BASE_VERSION "v${MAJOR_VERSION}.${MINOR_VERSION}"
+!define VERSION "${BASE_VERSION} debug"
+!define ALT_VER "${MAJOR_VERSION}_${MINOR_VERSION}_debug"
 !define PLUG "ttaplugins-winamp"
 !define PLUG_ALT "ttaplugins-winamp"
 !define IN_PLUG_FILE "in_tta"
 !define ENC_PLUG_FILE "enc_tta"
-!define LIBTTA_DLL "libtta"
+;!define LIBTTA_DLL "libtta"
 !define TAGLIB_DLL "tagd"
 
 ; use leet compression
@@ -114,7 +115,7 @@ Section ""
   File "..\Debug\${IN_PLUG_FILE}.dll"
   File "..\Debug\${ENC_PLUG_FILE}.dll"
   SetOutPath "$INSTDIR"
-  ;File "..\..\libraries\bin\${LIBTTA_DLL}.dll"
+;  File "..\..\libraries\bin\${LIBTTA_DLL}.dll"
   File "..\..\libraries\bin\${TAGLIB_DLL}.dll"
 
   SetOverwrite off

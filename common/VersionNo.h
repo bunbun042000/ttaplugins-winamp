@@ -22,25 +22,31 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
 #define /*
 !define /**/ /*\
-/**/BASE_VERSION "v3.5"
+/**/MAJOR_VERSION 3
 #define /*
 !define /**/ /*\
-/**/EXTENDED_VERSION 31
+/**/MINOR_VERSION 36
+#define /*
+!define /**/ /*\
+/**/EXTENDED_VERSION 0
+
 
 #ifndef MAKESTR
 #define _MAKESTR(s) #s
 #define MAKESTR(s) _MAKESTR(s)
 #endif
 
-#define COPYRIGHT_YEARS "2005-2015"
-#define VERSION BASE_VERSION " Beta" MAKESTR(EXTENDED_VERSION)
+#define BASE_VERSION "v" MAKESTR(MAJOR_VERSION) "." MAKESTR(MINOR_VERSION)
 
-#define FILEVER    3,5,EXTENDED_VERSION,0
-#define PRODUCTVER 3,5,EXTENDED_VERSION,0
+#define COPYRIGHT_YEARS "2005-2015"
+#define VERSION BASE_VERSION
+
+#define FILEVER    MAJOR_VERSION,MINOR_VERSION,EXTENDED_VERSION,0
+#define PRODUCTVER MAJOR_VERSION,MINOR_VERSION,EXTENDED_VERSION,0
 #define STRFILEVER    VERSION "\0"
 #define STRPRODUCTVER STRFILEVER
-#define COPYRIGHT_IN_TTA     BASE_VERSION ", (C)2005 Alexander Djourik. All rights reserved. Beta" MAKESTR(EXTENDED_VERSION) " (C)" COPYRIGHT_YEARS " Yamagta Fumihiro. All right reserved."
-#define COPYRIGHT_ENC_TTA    BASE_VERSION " Beta" MAKESTR(EXTENDED_VERSION) " (C)" COPYRIGHT_YEARS " Yamagata Fumihiro. All right reserved."
+#define COPYRIGHT_IN_TTA     BASE_VERSION ", (C)2005 Alexander Djourik. All rights reserved.  (C)" COPYRIGHT_YEARS " Yamagta Fumihiro. All right reserved."
+#define COPYRIGHT_ENC_TTA    BASE_VERSION " (C)" COPYRIGHT_YEARS " Yamagata Fumihiro. All right reserved."
 #define PLUGIN_VERSION VERSION
 
 #define  PROJECT_URL "<https://github.com/bunbun042000/ttaplugin-winamp>"
