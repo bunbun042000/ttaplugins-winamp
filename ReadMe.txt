@@ -14,7 +14,7 @@ This plugin performs Winamp Ver.2.9 or newer and tested by Winamp Ver.5.666.
  Please copy in_tta.dll and enc_tta.dll to Plugins folder in Winamp.
 
 *Release Notes
-2015-10-10 3.37       Fix a issue that is to reset playing time when playing and encoding tta files in same time(in_tta.dll)
+2015-10-10 3.37       Fix a issue that is to reset playing time when playing and encoding tta files in the same time(in_tta.dll)
 2015-09-04 3.36       Change rule of version number.
                       Change compile option of library(tag.dll)
                       Change compile option of library(in_tta.dll)
