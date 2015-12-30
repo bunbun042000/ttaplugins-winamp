@@ -155,8 +155,8 @@ Section "Microsoft Visual C++ 2013 SP1 Redist" SEC_CRT2013
 
   DetailPrint "Downloading Visual C++ 2015 Redistributable Setup..."
   DetailPrint "Contacting Microsoft.com..."
-  NSISdl::download /TIMEOUT=15000 "http://download.microsoft.com/download/0/4/1/041224F6-A7DC-486B-BD66-BCAAF74B6919/vc_redist.x86.exe" "vcredist_2015_x86.exe"
-
+  NSISdl::download /TIMEOUT=15000 "https://download.microsoft.com/download/C/E/5/CE514EAE-78A8-4381-86E8-29108D78DBD4/VC_redist.x86.exe" "vcredist_2015_x86.exe"
+  
   Pop $R0 ;Get the return value
   StrCmp $R0 "success" OnSuccess
 ;  DetailPrint "Could not contact Microsoft.com, or the file has been (re)moved!"
