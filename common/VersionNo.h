@@ -1,6 +1,6 @@
 /*
 The ttaplugins-winamp project.
-Copyright (C) 2005-2015 Yamagata Fumihiro
+Copyright (C) 2005-2016 Yamagata Fumihiro
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
@@ -25,7 +25,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 /**/MAJOR_VERSION 3
 #define /*
 !define /**/ /*\
-/**/MINOR_VERSION 38
+/**/MINOR_VERSION 39
 #define /*
 !define /**/ /*\
 /**/EXTENDED_VERSION 2
@@ -36,9 +36,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 #define MAKESTR(s) _MAKESTR(s)
 #endif
 
+#ifdef _DEBUG
+#define BASE_VERSION "v" MAKESTR(MAJOR_VERSION) "." MAKESTR(MINOR_VERSION) "debug"
+#else
 #define BASE_VERSION "v" MAKESTR(MAJOR_VERSION) "." MAKESTR(MINOR_VERSION)
+#endif
 
-#define COPYRIGHT_YEARS "2005-2015"
+#define COPYRIGHT_YEARS "2005-2016"
 #define VERSION BASE_VERSION
 
 #define FILEVER    MAJOR_VERSION,MINOR_VERSION,EXTENDED_VERSION,0
