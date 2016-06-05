@@ -1,4 +1,4 @@
-ttaplugins-winamp v3.40
+ttaplugins-winamp v3.41
 =====================================================
 
 *This plugin 
@@ -14,6 +14,9 @@ This plugin performs Winamp Ver.2.9 or newer and tested by Winamp Ver.5.666.
  Please copy in_tta.dll and enc_tta.dll to Plugins folder in Winamp.
 
 *Release Notes
+2016-06-06 3.41       Change decode engine from ttaplugin-winamp-3.5 to libtta-cpp-2.3(in_tta.dll)
+                      Fix incorrect bitrate in metadata(in_tta.dll)
+					  Change temporary directory for encoding to output directory(enc_tta.dll)
 2016-05-17 3.40       Fix minor bug.(enc_tta.dll)
 2016-05-15 3.39       Fix minor bug. Add type of metadata for Read/Write(in_tta.dll)
 2015-12-30 3.38		  Fix download URI of VC2015 runtime redistibutable.

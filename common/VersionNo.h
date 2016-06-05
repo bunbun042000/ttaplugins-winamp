@@ -25,10 +25,10 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 /**/MAJOR_VERSION 3
 #define /*
 !define /**/ /*\
-/**/MINOR_VERSION 40
+/**/MINOR_VERSION 41
 #define /*
 !define /**/ /*\
-/**/EXTENDED_VERSION 2
+/**/EXTENDED_VERSION 0
 
 
 #ifndef MAKESTR
@@ -52,6 +52,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 #define COPYRIGHT_IN_TTA     BASE_VERSION ", (C)2005 Alexander Djourik. All rights reserved.  (C)" COPYRIGHT_YEARS " Yamagta Fumihiro. All right reserved."
 #define COPYRIGHT_ENC_TTA    BASE_VERSION " (C)" COPYRIGHT_YEARS " Yamagata Fumihiro. All right reserved."
 #define PLUGIN_VERSION VERSION
+#define LIBTTA_VERSION "libtta C++ Ver.2.3"
 
 #define  PROJECT_URL "<https://github.com/bunbun042000/ttaplugin-winamp>"
 #define  ORIGINAL_CREADIT01 L"Plugin is written by Alexander Djourik, Pavel Zhilin and Anton Gorbunov.\n"

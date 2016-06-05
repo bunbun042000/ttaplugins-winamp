@@ -23,7 +23,7 @@
 !define PLUG_ALT "ttaplugins-winamp"
 !define IN_PLUG_FILE "in_tta"
 !define ENC_PLUG_FILE "enc_tta"
-;!define LIBTTA_DLL "libtta"
+!define LIBTTA_DLL "libtta"
 !define TAGLIB_DLL "tag"
 
 !include x64.nsh
@@ -117,13 +117,13 @@ Section ""
   File "..\Release\${IN_PLUG_FILE}.dll"
   File "..\Release\${ENC_PLUG_FILE}.dll"
   SetOutPath "$INSTDIR"
-;  File "..\..\libraries\bin\${LIBTTA_DLL}.dll"
+  File "..\..\libraries\bin\${LIBTTA_DLL}.dll"
   File "..\..\libraries\bin\${TAGLIB_DLL}.dll"
 
   SetOverwrite off
 SectionEnd
 
-Section "Microsoft Visual C++ 2013 SP1 Redist" SEC_CRT2013
+Section "Microsoft Visual C++ 2015 SP1 Redist" SEC_CRT2015
 
   ; Make this required on the web installer, since it has a fully reliable check to
   ; see if it needs to be downloaded and installed or not.
