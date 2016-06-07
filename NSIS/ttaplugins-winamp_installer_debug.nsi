@@ -24,7 +24,7 @@
 !define IN_PLUG_FILE "in_tta"
 !define ENC_PLUG_FILE "enc_tta"
 !define LIBTTA_DLL "libtta"
-!define TAGLIB_DLL "tagd"
+;!define TAGLIB_DLL "tagd"
 
 ; use leet compression
 SetCompressor lzma
@@ -116,7 +116,7 @@ Section ""
   File "..\Debug\${ENC_PLUG_FILE}.dll"
   SetOutPath "$INSTDIR"
   File "..\..\libraries\bin\${LIBTTA_DLL}.dll"
-  File "..\..\libraries\bin\${TAGLIB_DLL}.dll"
+;  File "..\..\libraries\bin\${TAGLIB_DLL}.dll"
 
   SetOverwrite off
 SectionEnd
