@@ -198,3 +198,5 @@ FakesAssemblies/
 *.exe
 *.zip
 *.diagsession
+*.db
+*.opendb
