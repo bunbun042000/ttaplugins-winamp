@@ -25,7 +25,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 /**/MAJOR_VERSION 3
 #define /*
 !define /**/ /*\
-/**/MINOR_VERSION 45
+/**/MINOR_VERSION 46
 #define /*
 !define /**/ /*\
 /**/EXTENDED_VERSION 0
@@ -42,7 +42,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 #define BASE_VERSION "v" MAKESTR(MAJOR_VERSION) "." MAKESTR(MINOR_VERSION)
 #endif
 
-#define COPYRIGHT_YEARS "2005-2016"
+#define COPYRIGHT_YEARS "2005-2017"
 #define VERSION BASE_VERSION
 
 #define FILEVER    MAJOR_VERSION,MINOR_VERSION,EXTENDED_VERSION,0

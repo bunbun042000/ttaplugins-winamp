@@ -1,4 +1,4 @@
-ttaplugins-winamp v3.45
+ttaplugins-winamp v3.46
 =====================================================
 
 *This plugin 
@@ -14,6 +14,8 @@ This plugin performs Winamp Ver.2.9 or newer and tested by Winamp Ver.5.666.
  Please copy in_tta.dll and enc_tta.dll to Plugins folder in Winamp.
 
 *Release Notes
+2017-02-25 3.46       Change upstream taglib stable (based on 2017/02/24 15:47:30 commit Hash:4891ee729d5bd98fbe8ff82b89e9758f00d18815)(in_tta.dll)
+                      Use static libtta library(in_tta.dll)
 2016-12-14 3.45       Fix memory leak(libtta.dll)
                       Fix memory leak(enc_tta.dll)
 2016-12-12 3.44       Improve code stability(in_tta.dll)
