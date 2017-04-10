@@ -23,7 +23,7 @@
 !define PLUG_ALT "ttaplugins-winamp"
 !define IN_PLUG_FILE "in_tta"
 !define ENC_PLUG_FILE "enc_tta"
-;!define LIBTTA_DLL "libtta"
+!define LIBTTA_DLL "libtta"
 ;!define TAGLIB_DLL "tagd"
 
 ; use leet compression

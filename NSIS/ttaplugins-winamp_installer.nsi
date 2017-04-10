@@ -117,45 +117,45 @@ Section ""
   File "..\Release\${IN_PLUG_FILE}.dll"
   File "..\Release\${ENC_PLUG_FILE}.dll"
   SetOutPath "$INSTDIR"
-  File "..\..\libraries\bin\${LIBTTA_DLL}.dll"
+;  File "..\..\libraries\bin\${LIBTTA_DLL}.dll"
 ;  File "..\..\libraries\bin\${TAGLIB_DLL}.dll"
 
   SetOverwrite off
 SectionEnd
 
-Section "Microsoft Visual C++ 2015 SP1 Redist" SEC_CRT2015
+Section "Microsoft Visual C++ 2010 Redist" SEC_CRT2010
 
   ; Make this required on the web installer, since it has a fully reliable check to
   ; see if it needs to be downloaded and installed or not.
   SectionIn RO
 
-  ; Detection made easy: Unlike previous redists, VC2015 now generates a platform
+  ; Detection made easy: Unlike previous redists, VC2010 now generates a platform
   ; independent key for checking availability.
-  ; HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\14.0\VC\Runtimes\x64  for x64 Windows
-  ; HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0\VC\Runtimes\x86  for x86 Windows
+  ; HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\1926E8D15D0BCE53481466615F760A7F for x64 Windows
+  ; HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\1D5E3C0FEDA1E123187686FED06E995A for x86 Windows
   
   ; Download from:
-  ; http://download.microsoft.com/download/0/4/1/041224F6-A7DC-486B-BD66-BCAAF74B6919/vc_redist.x86.exe
+  ; https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x86.exe
 
   ClearErrors
   
   ${If} ${RunningX64}
-  	ReadRegDword $R0 HKLM "SOFTWARE\Microsoft\VisualStudio\14.0\VC\Runtimes\x86" "Installed"
+   ReadRegDWORD $R0 HKLM SOFTWARE\Classes\Installer\Products\1926E8D15D0BCE53481466615F760A7F Assignment
 	${Else}
-		ReadRegDword $R0 HKLM "SOFTWARE\Microsoft\VisualStudio\14.0\VC\Runtimes\x86" "Installed"
+   ReadRegDWORD $R0 HKLM SOFTWARE\Classes\Installer\Products\1D5E3C0FEDA1E123187686FED06E995A Assignment
 	${EndIf}
 	
   IfErrors 0 +2
-  DetailPrint "Visual C++ 2015 Redistributable registry key was not found; assumed to be uninstalled."
+  DetailPrint "Visual C++ 2010 Redistributable registry key was not found; assumed to be uninstalled."
   StrCmp $R0 "1" 0 +3
-    DetailPrint "Visual C++ 2015 Redistributable is already installed; skipping!"
+    DetailPrint "Visual C++ 2010 Redistributable is already installed; skipping!"
     Goto done
 
   SetOutPath "$TEMP"
 
-  DetailPrint "Downloading Visual C++ 2015 Redistributable Setup..."
+  DetailPrint "Downloading Visual C++ 2010 Redistributable Setup..."
   DetailPrint "Contacting Microsoft.com..."
-  NSISdl::download /TIMEOUT=15000 "https://download.microsoft.com/download/C/E/5/CE514EAE-78A8-4381-86E8-29108D78DBD4/VC_redist.x86.exe" "vcredist_2015_x86.exe"
+  NSISdl::download /TIMEOUT=15000 "https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x86.exe" "vcredist_2010_x86.exe"
   
   Pop $R0 ;Get the return value
   StrCmp $R0 "success" OnSuccess
@@ -163,15 +163,15 @@ Section "Microsoft Visual C++ 2015 SP1 Redist" SEC_CRT2015
 
   Pop $R0 ;Get the return value
   StrCmp $R0 "success" +2
-    MessageBox MB_OK "Could not download Visual Studio 2015 Redist; none of the mirrors appear to be functional."
+    MessageBox MB_OK "Could not download Visual Studio 2010 Redist; none of the mirrors appear to be functional."
     Goto done
 
 OnSuccess:
-  DetailPrint "Running Visual C++ 2015 Redistributable Setup..."
-  ExecWait '"$TEMP\vcredist_2015_x86.exe" /qb'
-  DetailPrint "Finished Visual C++ 2015 Redistributable Setup"
+  DetailPrint "Running Visual C++ 2010 Redistributable Setup..."
+  ExecWait '"$TEMP\vcredist_2010_x86.exe" /qb'
+  DetailPrint "Finished Visual C++ 2010 Redistributable Setup"
   
-  Delete "$TEMP\vcredist_2015_x86.exe"
+  Delete "$TEMP\vcredist_2010_x86.exe"
 
 done:
 SectionEnd

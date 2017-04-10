@@ -1,6 +1,6 @@
 /*
 The ttaplugins-winamp project.
-Copyright (C) 2005-2016 Yamagata Fumihiro
+Copyright (C) 2005-2017 Yamagata Fumihiro
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
@@ -25,7 +25,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 /**/MAJOR_VERSION 3
 #define /*
 !define /**/ /*\
-/**/MINOR_VERSION 46
+/**/MINOR_VERSION 47
 #define /*
 !define /**/ /*\
 /**/EXTENDED_VERSION 0
@@ -34,32 +34,40 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 #ifndef MAKESTR
 #define _MAKESTR(s) #s
 #define MAKESTR(s) _MAKESTR(s)
+#define _MAKESTRW(s) L#s
+#define MAKESTRW(s) _MAKESTRW(s)
 #endif
 
 #ifdef _DEBUG
-#define BASE_VERSION "v" MAKESTR(MAJOR_VERSION) "." MAKESTR(MINOR_VERSION) "debug"
+#define BASE_VERSION_CHAR "v" MAKESTR(MAJOR_VERSION) "." MAKESTR(MINOR_VERSION) "debug"
+#define BASE_VERSION_WCHAR L"v" MAKESTRW(MAJOR_VERSION) L"." MAKESTRW(MINOR_VERSION) L"debug"
 #else
-#define BASE_VERSION "v" MAKESTR(MAJOR_VERSION) "." MAKESTR(MINOR_VERSION)
+#define BASE_VERSION_CHAR "v" MAKESTR(MAJOR_VERSION) "." MAKESTR(MINOR_VERSION)
+#define BASE_VERSION_WCHAR L"v" MAKESTRW(MAJOR_VERSION) L"." MAKESTRW(MINOR_VERSION)
 #endif
 
-#define COPYRIGHT_YEARS "2005-2017"
-#define VERSION BASE_VERSION
+#define COPYRIGHT_YEARS L"2005-2017"
+#define VERSION_CHAR BASE_VERSION_CHAR
+#define VERSION_WCHAR BASE_VERSION_WCHAR
 
 #define FILEVER    MAJOR_VERSION,MINOR_VERSION,EXTENDED_VERSION,0
 #define PRODUCTVER MAJOR_VERSION,MINOR_VERSION,EXTENDED_VERSION,0
-#define STRFILEVER    VERSION "\0"
+#define STRFILEVER    VERSION_CHAR "\0"
 #define STRPRODUCTVER STRFILEVER
-#define COPYRIGHT_IN_TTA     BASE_VERSION ", (C)2005 Alexander Djourik. All rights reserved.  (C)" COPYRIGHT_YEARS " Yamagta Fumihiro. All right reserved."
-#define COPYRIGHT_ENC_TTA    BASE_VERSION " (C)" COPYRIGHT_YEARS " Yamagata Fumihiro. All right reserved."
-#define PLUGIN_VERSION VERSION
-#define LIBTTA_VERSION "libtta C++ Ver.2.3"
+#define COPYRIGHT_IN_TTA     BASE_VERSION_CHAR ", (C)2005 Alexander Djourik. All rights reserved.  (C)" COPYRIGHT_YEARS " Yamagta Fumihiro. All right reserved."
+#define COPYRIGHT_ENC_TTA    BASE_VERSION_CHAR " (C)" COPYRIGHT_YEARS " Yamagata Fumihiro. All right reserved."
+#define PLUGIN_VERSION_CHAR VERSION_CHAR
+#define PLUGIN_VERSION_WCHAR VERSION_WCHAR
+#define LIBTTA_VERSION_WCHAR L"libtta C++ Ver.2.3"
 
-#define PROJECT_URL "<https://github.com/bunbun042000/ttaplugin-winamp>"
+#define PROJECT_URL_WCHAR L"<https://github.com/bunbun042000/ttaplugin-winamp>"
 #define ORIGINAL_CREADIT01 L"Plugin is written by Alexander Djourik, Pavel Zhilin and Anton Gorbunov.\n"
-#define ORIGINAL_CREADIT02 "Copyright (c) 2003 Alexander Djourik.\n"
-#define ORIGINAL_CREADIT03 "All rights reserved.\n"
-#define LIBTTA_ORIGINAL_CREADIT LIBTTA_VERSION "Copyright(c) 1999 - 2015 Aleksander Djuric.All rights reserved.\n"
-#define CREADIT01 "Modified by Yamagata Fumihiro, " COPYRIGHT_YEARS "\n"
-#define CREADIT02 "Copyright (C)" COPYRIGHT_YEARS " Yamagata Fumihiro.\n"
+#define ORIGINAL_CREADIT02 L"Copyright (c) 2003 Alexander Djourik.\n"
+#define ORIGINAL_CREADIT03 L"All rights reserved.\n"
+#define LIBTTA_ORIGINAL_CREADIT LIBTTA_VERSION_WCHAR L"Copyright(c) 1999 - 2015 Aleksander Djuric.All rights reserved.\n"
+#define CREADIT01 L"Modified by Yamagata Fumihiro, " COPYRIGHT_YEARS L"\n"
+#define CREADIT02 L"Copyright (C)" COPYRIGHT_YEARS L" Yamagata Fumihiro.\n"
 
+#define IN_TTA_PLUGIN_VERSION_CREADIT L"Winamp plug-in version " PLUGIN_VERSION_WCHAR L"\nbased on " LIBTTA_VERSION_WCHAR L"\n" PROJECT_URL_WCHAR
+#define IN_TTA_PLUGIN_COPYRIGHT_CREADIT ORIGINAL_CREADIT01 ORIGINAL_CREADIT02 ORIGINAL_CREADIT03 CREADIT01 CREADIT02
 #endif  /* VERSIONNO_H */
