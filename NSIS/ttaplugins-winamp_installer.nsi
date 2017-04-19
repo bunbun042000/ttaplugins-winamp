@@ -23,8 +23,9 @@
 !define PLUG_ALT "ttaplugins-winamp"
 !define IN_PLUG_FILE "in_tta"
 !define ENC_PLUG_FILE "enc_tta"
-!define LIBTTA_DLL "libtta"
+;!define LIBTTA_DLL "libtta"
 ;!define TAGLIB_DLL "tag"
+!define VC_REDIST "vcredist_2017_x86.exe"
 
 !include x64.nsh
 
@@ -123,39 +124,38 @@ Section ""
   SetOverwrite off
 SectionEnd
 
-Section "Microsoft Visual C++ 2010 Redist" SEC_CRT2010
+Section "Microsoft Visual C++ 2017 Redist" SEC_CRT2017
 
   ; Make this required on the web installer, since it has a fully reliable check to
   ; see if it needs to be downloaded and installed or not.
   SectionIn RO
 
-  ; Detection made easy: Unlike previous redists, VC2010 now generates a platform
+  ; Detection made easy: Unlike previous redists, VC2017 now generates a platform
   ; independent key for checking availability.
   ; HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\1926E8D15D0BCE53481466615F760A7F for x64 Windows
-  ; HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\1D5E3C0FEDA1E123187686FED06E995A for x86 Windows
+  ; HKEY_CLASSES_ROOT\Installer\Dependencies\,,x86,14.0,bundle\Dependents\{c239cea1-d49e-4e16-8e87-8c055765f7ec} for x86 Windows
   
   ; Download from:
-  ; https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x86.exe
-
+  ; https://download.microsoft.com/download/7/a/6/7a68af9f-3761-4781-809b-b6df0f56d24c/vc_redist.x86.exe
   ClearErrors
   
   ${If} ${RunningX64}
    ReadRegDWORD $R0 HKLM SOFTWARE\Classes\Installer\Products\1926E8D15D0BCE53481466615F760A7F Assignment
 	${Else}
-   ReadRegDWORD $R0 HKLM SOFTWARE\Classes\Installer\Products\1D5E3C0FEDA1E123187686FED06E995A Assignment
+   ReadRegStr $R0 HKCR Installer\Dependencies\,,x86,14.0,bundle\Dependents\{c239cea1-d49e-4e16-8e87-8c055765f7ec} ""
 	${EndIf}
 	
   IfErrors 0 +2
-  DetailPrint "Visual C++ 2010 Redistributable registry key was not found; assumed to be uninstalled."
+  DetailPrint "Visual C++ 2017 Redistributable registry key was not found; assumed to be uninstalled."
   StrCmp $R0 "1" 0 +3
-    DetailPrint "Visual C++ 2010 Redistributable is already installed; skipping!"
+    DetailPrint "Visual C++ 2017 Redistributable is already installed; skipping!"
     Goto done
 
   SetOutPath "$TEMP"
 
   DetailPrint "Downloading Visual C++ 2010 Redistributable Setup..."
   DetailPrint "Contacting Microsoft.com..."
-  NSISdl::download /TIMEOUT=15000 "https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x86.exe" "vcredist_2010_x86.exe"
+  NSISdl::download /TIMEOUT=15000 "https://download.microsoft.com/download/7/a/6/7a68af9f-3761-4781-809b-b6df0f56d24c/vc_redist.x86.exe" ${VC_REDIST}
   
   Pop $R0 ;Get the return value
   StrCmp $R0 "success" OnSuccess
@@ -163,15 +163,15 @@ Section "Microsoft Visual C++ 2010 Redist" SEC_CRT2010
 
   Pop $R0 ;Get the return value
   StrCmp $R0 "success" +2
-    MessageBox MB_OK "Could not download Visual Studio 2010 Redist; none of the mirrors appear to be functional."
+    MessageBox MB_OK "Could not download Visual Studio 2017 Redist; none of the mirrors appear to be functional."
     Goto done
 
 OnSuccess:
-  DetailPrint "Running Visual C++ 2010 Redistributable Setup..."
-  ExecWait '"$TEMP\vcredist_2010_x86.exe" /qb'
-  DetailPrint "Finished Visual C++ 2010 Redistributable Setup"
+  DetailPrint "Running Visual C++ 2017 Redistributable Setup..."
+  ExecWait '"$TEMP\${VC_REDIST}" /qb'
+  DetailPrint "Finished Visual C++ 2017 Redistributable Setup"
   
-  Delete "$TEMP\vcredist_2010_x86.exe"
+  Delete "$TEMP\${VC_REDIST}"
 
 done:
 SectionEnd
