@@ -118,7 +118,7 @@ Section ""
   File "..\Release\${IN_PLUG_FILE}.dll"
   File "..\Release\${ENC_PLUG_FILE}.dll"
   SetOutPath "$INSTDIR"
-;  File "..\..\libraries\bin\${LIBTTA_DLL}.dll"
+;  File "..\..\libraries_vc2017\bin\${LIBTTA_DLL}.dll"
 ;  File "..\..\libraries\bin\${TAGLIB_DLL}.dll"
 
   SetOverwrite off
