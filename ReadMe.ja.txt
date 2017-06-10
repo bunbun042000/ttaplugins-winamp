@@ -1,4 +1,4 @@
-﻿ttaplugins-winamp v3.47
+﻿ttaplugins-winamp v3.49
 =====================================================
 
 *このプラグインは
@@ -14,6 +14,8 @@ Winamp Ver2.9以降に対応しており，Winamp Ver.5.666にて動作確認し
  WinampのフォルダにあるPluginsフォルダにin_tta.dllとenc_tta.dllをコピーしてください。
 
 *更新履歴
+2017-06-06 3.49       デコードエンジンをttaplugin-winamp-3.5ベースからlibtta-cpp-2.3ベースに変更(in_tta.dll)
+2017-04-19 3.48       再生用デコードエンジンをlibtta-cpp-2.3ベースからttaplugin-winamp-3.5 ベースに変更(in_tta.dll)
 2017-04-07 3.47       Windows7での実行を可能にするためにコンパイラをVC2010に変更(in_tta.dll,enc_tta.dll)
                       zlibを動的リンクに変更(in_tta.dll)
 2017-02-25 3.46       taglibを最新master(based on 2017/02/24 15:47:30 commit Hash:4891ee729d5bd98fbe8ff82b89e9758f00d18815)ベースに変更(in_tta.dll)
