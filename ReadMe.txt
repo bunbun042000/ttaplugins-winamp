@@ -1,4 +1,4 @@
-ttaplugins-winamp v3.53
+ttaplugins-winamp v3.54
 =====================================================
 
 *This plugin 
@@ -8,12 +8,15 @@ The modification is ID3v2 Tag read/write function using
 taglib(https://github.com/taglib/taglib).
 And add read metadata (include album art) for MediaLibray.
 Additionally, tta encode plugin is included.
-This plugin performs Winamp Ver.2.9 or newer and tested by Winamp Ver.5.666.
+This plugin performs Winamp Ver.2.9 or newer and tested by Winamp Ver.5.8.
 
 *Install
  Please copy in_tta.dll and enc_tta.dll to Plugins folder in Winamp.
 
 *Release Notes
+2019-02-01 3.54       Change upstream taglib master (based on 2018/10/28 22:43:45 Commit hash:5cb589a5b82c13ba8f0542e5e79629da7645cb3c)(in_tta.dll)
+                      Change NSIS verion 3.04 and Update install script for downloading VC2017 redistributable under proxy.
+                      Change compiler to Visual Studio 2017(version 15.9.6)(in_tta.dll, enc_tta.dll)
 2018-01-01 3.53       Change upstream taglib master (based on 2017/11/20 8:03:52 Commit hash:a80093167f93f4147ec153693d871780874f9747)(in_tta.dll)
 2017-12-31 3.52       Change upstream taglib master (based on 2017/10/01 0:15:41 commit Hash:cb9f07d9dcd791b63e622da43f7b232adaec0a9a)(in_tta.dll)
                       Change compiler to Visual Studio 2017(version 15.5.2)(in_tta.dll, enc_tta.dll)
