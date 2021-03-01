@@ -130,44 +130,32 @@ Section "Microsoft Visual C++ 2017 Redist" SEC_CRT2017
   ; see if it needs to be downloaded and installed or not.
   SectionIn RO
 
-  ; https://stackoverflow.com/questions/12206314/detect-if-visual-c-redistributable-for-visual-studio-2012-is-installed
-  ; Detection made easy: Unlike previous redists, VC2017 now generates a platform
-  ; independent key for checking availability.
-  ; HKEY_CLASSES_ROOT\Installer\Dependencies\VC,redist.x64,amd64,14.16,bundle\Dependents\{427ada59-85e7-4bc8-b8d5-ebf59db60423} for x64 Windows
-  ; HKEY_CLASSES_ROOT\Installer\Dependencies\VC,redist.x86,x86,14.16,bundle\{2ff11a2a-f7ac-4a6c-8cd4-c7bb974f3642} for x86 Windows
-  
-  ; Download from:
-  ; https://download.microsoft.com/download/7/a/6/7a68af9f-3761-4781-809b-b6df0f56d24c/vc_redist.x86.exe
-  ClearErrors
-  
-;  ${If} ${RunningX64}
-;    ReadRegDWORD $R0 HKLM SOFTWARE\Wow6432Node\Microsoft\VisualStudio\14.0\VC\Runtimes\x86 Installed
-;  ${Else}
-    ReadRegStr $R0 HKCR Installer\Dependencies\VC,redist.x86,x86,14.16,bundle ""
-;  ${EndIf}
-	
-  IfErrors 0 +2
-    DetailPrint "Visual C++ 2017 Redistributable registry key was not found; assumed to be uninstalled."
-  StrCmp $R0 "{2ff11a2a-f7ac-4a6c-8cd4-c7bb974f3642}" 0 +3
-  DetailPrint "Visual C++ 2017 Redistributable is already installed; skipping!"
-  Goto done
+    SetRegView 64 
+    ReadRegStr $0 HKLM "SOFTWARE\Microsoft\VisualStudio\14.0\VC\Runtimes\x64" "Version"
+    DetailPrint "Found version $0"
+
+    ${If} $0 >= "v14.16.27024.01"
+    	DetailPrint "Visual C++ 2017 Redistributable registry key was not found; assumed to be uninstalled."
+	Goto done
+     ${Else}
 
   SetOutPath "$TEMP"
 
-  DetailPrint "Downloading Visual C++ 2017 Redistributable Setup..."
+  DetailPrint "Downloading Visual C++ 2019 Redistributable Setup..."
   DetailPrint "Contacting Microsoft.com..."
 ;  NSISdl::download /TIMEOUT=15000 "https://download.microsoft.com/download/7/a/6/7a68af9f-3761-4781-809b-b6df0f56d24c/vc_redist.x86.exe" ${VC_REDIST}
-  inetc::get /CAPTION "Visual C++ 2017 Redistributable Setup..." /CANCELTEXT "Canceled" "https://aka.ms/vs/15/release/VC_redist.x86.exe" "$TEMP\${VC_REDIST}"
+  inetc::get /CAPTION "Visual C++ 2019 Redistributable Setup..." /CANCELTEXT "Canceled" "https://aka.ms/vs/16/release/vc_redist.x86.exe" "$TEMP\${VC_REDIST}"
   
   Pop $0 ;Get the return value
   StrCmp $0 "OK" OnSuccess
   MessageBox MB_OK "Could not download Visual Studio 2017 Redist; none of the mirrors appear to be functional."
   Goto done
+${EndIf}
 
 OnSuccess:
-  DetailPrint "Running Visual C++ 2017 Redistributable Setup..."
+  DetailPrint "Running Visual C++ 2019 Redistributable Setup..."
   ExecWait '"$TEMP\${VC_REDIST}" /qb'
-  DetailPrint "Finished Visual C++ 2017 Redistributable Setup"
+  DetailPrint "Finished Visual C++ 2019 Redistributable Setup"
   
   Delete "$TEMP\${VC_REDIST}"
 
