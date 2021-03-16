@@ -10,6 +10,8 @@
 
 ;--------------------------------
 
+Unicode true
+
 ; Header Files
 ; not used in this case but handy when scaling up to multiple sections
 ; !include "Sections.nsh"

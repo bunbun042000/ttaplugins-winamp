@@ -10,6 +10,8 @@
 
 ;--------------------------------
 
+Unicode true
+
 ; Header Files
 ; not used in this case but handy when scaling up to multiple sections
 ; !include "Sections.nsh"
@@ -25,7 +27,7 @@
 !define ENC_PLUG_FILE "enc_tta"
 ;!define LIBTTA_DLL "libtta"
 ;!define TAGLIB_DLL "tag"
-!define VC_REDIST "vcredist_2017_x86.exe"
+!define VC_REDIST "vcredist_2019_x86.exe"
 
 !include x64.nsh
 
@@ -124,7 +126,7 @@ Section ""
   SetOverwrite off
 SectionEnd
 
-Section "Microsoft Visual C++ 2017 Redist" SEC_CRT2017
+Section "Microsoft Visual C++ 2019 Redist" SEC_CRT2019
 
   ; Make this required on the web installer, since it has a fully reliable check to
   ; see if it needs to be downloaded and installed or not.
@@ -148,7 +150,7 @@ Section "Microsoft Visual C++ 2017 Redist" SEC_CRT2017
   
   Pop $0 ;Get the return value
   StrCmp $0 "OK" OnSuccess
-  MessageBox MB_OK "Could not download Visual Studio 2017 Redist; none of the mirrors appear to be functional."
+  MessageBox MB_OK "Could not download Visual Studio 2019 Redist; none of the mirrors appear to be functional."
   Goto done
 ${EndIf}
 

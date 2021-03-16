@@ -1,4 +1,4 @@
-﻿ttaplugins-winamp v3.57
+﻿ttaplugins-winamp v3.58
 =====================================================
 
 *このプラグインは
@@ -14,6 +14,9 @@ Winamp Ver2.9以降に対応しており，Winamp Ver.5.8にて動作確認し�
  WinampのフォルダにあるPluginsフォルダにin_tta.dllとenc_tta.dllをコピーしてください。
 
 *更新履歴
+2021-03-16 3.58       taglibを最新master(based on 2021/02/17 16:20:05 Commit hash:b5cd4c40e25c8026b42c4e71b4df63cbeb7cfe6a)ベースに変更(in_tta.dll)
+                      コンパイラをVisual Studio 2019(バージョン 16.9.1)に変更(in_tta.dll, enc_tta.dll)
+                      NSIS スクリプトをUnicode targetに変更
 2021-03-01 3.57       taglibを最新master(based on 2021/02/16 21:00:49 Commit hash:340ec9932a7c782a2f876c0efea233a43502c88e)ベースに変更(in_tta.dll)
                       コンパイラをVisual Studio 2019(バージョン 16.8.6)に変更(in_tta.dll, enc_tta.dll)
 2019-06-27 3.55       taglibを最新master(based on 2019/05/31 20:21:16 Commit hash:ba7adc2bc261ed634c2a964185bcffb9365ad2f4)ベースに変更(in_tta.dll)

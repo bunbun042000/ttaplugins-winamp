@@ -1,4 +1,4 @@
-ttaplugins-winamp v3.57
+ttaplugins-winamp v3.58
 =====================================================
 
 *This plugin 
@@ -14,6 +14,9 @@ This plugin performs Winamp Ver.2.9 or newer and tested by Winamp Ver.5.8.
  Please copy in_tta.dll and enc_tta.dll to Plugins folder in Winamp.
 
 *Release Notes
+2021-03-16 3.58       Change upstream taglib master (based on 2021/02/17 16:20:05 Commit hash:b5cd4c40e25c8026b42c4e71b4df63cbeb7cfe6a)(in_tta.dll)
+                      Change compiler to Visual Studio 2019 (Version 16.9.1)(in_tta.dll, enc_tta.dll)
+                      Update NSIS script for Unicode target
 2021-03-01 3.57       Change upstream taglib master (based on 2021/02/16 21:00:49 Commit hash:340ec9932a7c782a2f876c0efea233a43502c88e)(in_tta.dll)
                       Change compiler to Visual Studio 2019 (Version 16.8.6)(in_tta.dll, enc_tta.dll)
 2019-06-27 3.55       Change upstream taglib master (based on 2019/05/31 20:21:16 Commit hash:ba7adc2bc261ed634c2a964185bcffb9365ad2f4)(in_tta.dll)
