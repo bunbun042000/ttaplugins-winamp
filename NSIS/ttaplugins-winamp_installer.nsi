@@ -27,7 +27,7 @@ Unicode true
 !define ENC_PLUG_FILE "enc_tta"
 ;!define LIBTTA_DLL "libtta"
 ;!define TAGLIB_DLL "tag"
-!define VC_REDIST "vcredist_2019_x86.exe"
+!define VC_REDIST "vcredist_2022_x86.exe"
 
 !include x64.nsh
 
@@ -126,7 +126,7 @@ Section ""
   SetOverwrite off
 SectionEnd
 
-Section "Microsoft Visual C++ 2019 Redist" SEC_CRT2019
+Section "Microsoft Visual C++ 2022 Redist" SEC_CRT2022
 
   ; Make this required on the web installer, since it has a fully reliable check to
   ; see if it needs to be downloaded and installed or not.
@@ -136,28 +136,28 @@ Section "Microsoft Visual C++ 2019 Redist" SEC_CRT2019
     ReadRegStr $0 HKLM "SOFTWARE\Microsoft\VisualStudio\14.0\VC\Runtimes\x64" "Version"
     DetailPrint "Found version $0"
 
-    ${If} $0 >= "v14.16.27024.01"
-    	DetailPrint "Visual C++ 2017 Redistributable registry key was not found; assumed to be uninstalled."
+    ${If} $0 >= "v14.30.30704.00"
+    	DetailPrint "Visual C++ 2022 Redistributable registry key was not found; assumed to be uninstalled."
 	Goto done
      ${Else}
 
   SetOutPath "$TEMP"
 
-  DetailPrint "Downloading Visual C++ 2019 Redistributable Setup..."
+  DetailPrint "Downloading Visual C++ 2022 Redistributable Setup..."
   DetailPrint "Contacting Microsoft.com..."
 ;  NSISdl::download /TIMEOUT=15000 "https://download.microsoft.com/download/7/a/6/7a68af9f-3761-4781-809b-b6df0f56d24c/vc_redist.x86.exe" ${VC_REDIST}
-  inetc::get /CAPTION "Visual C++ 2019 Redistributable Setup..." /CANCELTEXT "Canceled" "https://aka.ms/vs/16/release/vc_redist.x86.exe" "$TEMP\${VC_REDIST}"
+  inetc::get /CAPTION "Visual C++ 2022 Redistributable Setup..." /CANCELTEXT "Canceled" "https://aka.ms/vs/17/release/vc_redist.x86.exe" "$TEMP\${VC_REDIST}"
   
   Pop $0 ;Get the return value
   StrCmp $0 "OK" OnSuccess
-  MessageBox MB_OK "Could not download Visual Studio 2019 Redist; none of the mirrors appear to be functional."
+  MessageBox MB_OK "Could not download Visual Studio 2022 Redist; none of the mirrors appear to be functional."
   Goto done
 ${EndIf}
 
 OnSuccess:
-  DetailPrint "Running Visual C++ 2019 Redistributable Setup..."
+  DetailPrint "Running Visual C++ 2022 Redistributable Setup..."
   ExecWait '"$TEMP\${VC_REDIST}" /qb'
-  DetailPrint "Finished Visual C++ 2019 Redistributable Setup"
+  DetailPrint "Finished Visual C++ 2022 Redistributable Setup"
   
   Delete "$TEMP\${VC_REDIST}"
 
