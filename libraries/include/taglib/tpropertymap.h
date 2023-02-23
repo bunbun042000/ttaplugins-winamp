@@ -192,6 +192,15 @@ namespace TagLib {
     PropertyMap &merge(const PropertyMap &other);
 
     /*!
+     * Returns the value associated with \a key.
+     *
+     * If the map does not contain \a key, it returns defaultValue.
+     * If no defaultValue is specified, it returns an empty string list.
+     */
+    StringList value(const String &key,
+                           const StringList &defaultValue = StringList()) const;
+
+    /*!
      * Returns a reference to the value associated with \a key.
      *
      * \note: If \a key is not contained in the map, an empty
@@ -243,5 +252,5 @@ namespace TagLib {
     StringList unsupported;
   };
 
-}
+}  // namespace TagLib
 #endif /* TAGLIB_PROPERTYMAP_H_ */
