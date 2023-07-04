@@ -1,4 +1,4 @@
-ttaplugins-winamp v3.67
+ttaplugins-winamp v3.68
 =====================================================
 
 *This plugin 
@@ -14,6 +14,8 @@ This plugin performs Winamp Ver.2.9 or newer and tested on Winamp Ver.5.9.2.
  Please copy in_tta.dll and enc_tta.dll to Plugins folder in Winamp.
 
 *Release Notes
+2023-07-04 3.68       Change upstream tablib master (based on 2023/07/01 14:43:27 Commit hash:c840222a391439285478820b4477d5fa6b78d63d)(in_tta.dll)
+                      Change compiler to Visual Studio 2022 (Version 17.6.4)(in_tta.dll, enc_tta.dll)
 2023-06-03 3.67       Change upstream tablib master (based on 2023/05/26 20:12:19 Commit hash:39e712796f2dd7336188ae690bc3837049f29aac)(in_tta.dll)
                       Change compiler to Visual Studio 2022 (Version 17.6.2)(in_tta.dll, enc_tta.dll)
 2023-02-23 3.66       Change upstream tablib master (based on 2022/12/21 22:14:35 Commit hash:a31356e330674640a07bef7d71d08242cae8e9bf)(in_tta.dll)
