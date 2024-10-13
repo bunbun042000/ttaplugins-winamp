@@ -1,4 +1,4 @@
-﻿ttaplugins-winamp v3.68
+﻿ttaplugins-winamp v3.69
 =====================================================
 
 *このプラグインは
@@ -7,13 +7,16 @@ taglib(https://github.com/taglib/taglib)をベースとした
 メディアライブラリ読み込み対応を付け加え、ID3v2周りを改変したものです。
 またアルバムアートなどメディアライブラリのメタデータ読み込み機能を付加しました。
 新たにttaファイルへのエンコードプラグインも同梱しています。
-Winamp Ver.2.9以降に対応しており，Winamp Ver.5.9.2にて動作確認しています。
+Winamp Ver.2.9以降に対応しており，Winamp Ver.5.9.1にて動作確認しています。
 
 
 *インストール方法
  WinampのフォルダにあるPluginsフォルダにin_tta.dllとenc_tta.dllをコピーしてください。
 
 *更新履歴
+2024-10-13 3.69       taglibを最新master(based on 2024/08/24 13:40:41 Commit hash:e3de03501ff66221d1f1f971022b248d5b38ba06)ベースに変更(in_tta.dll)
+                      コンパイラをVisual Studio 2022(バージョン 17.11.5)に変更(in_tta.dll, enc_tta.dll)
+                      AlbumArt.cpp中のTTA_AlbumArtProvider::IsMine() 関数を修正(in_tta.dll)
 2023-07-04 3.68       taglibを最新master(based on 2023/07/01 14:43:27 Commit hash:c840222a391439285478820b4477d5fa6b78d63d)ベースに変更(in_tta.dll)
                       コンパイラをVisual Studio 2022(バージョン 17.6.4)に変更(in_tta.dll, enc_tta.dll)
 2023-06-03 3.67       taglibを最新master(based on 2023/05/26 20:12:19 Commit hash:39e712796f2dd7336188ae690bc3837049f29aac)ベースに変更(in_tta.dll)

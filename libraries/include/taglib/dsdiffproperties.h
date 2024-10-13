@@ -37,7 +37,7 @@ namespace TagLib {
     //! An implementation of audio property reading for DSDIFF
 
     /*!
-     * This reads the data from an DSDIFF stream found in the AudioProperties
+     * This reads the data from a DSDIFF stream found in the AudioProperties
      * API.
      */
 
@@ -48,36 +48,32 @@ namespace TagLib {
        * Create an instance of DSDIFF::Properties with the data read from the
        * ByteVector \a data.
        */
-      Properties(const unsigned int sampleRate, const unsigned short channels,
-                 const unsigned long long samplesCount, const int bitrate,
+      Properties(unsigned int sampleRate, unsigned short channels,
+                 unsigned long long samplesCount, int bitrate,
                  ReadStyle style);
 
       /*!
        * Destroys this DSDIFF::Properties instance.
        */
-      virtual ~Properties();
+      ~Properties() override;
 
       // Reimplementations.
 
-      virtual int length() const;
-      virtual int lengthInSeconds() const;
-      virtual int lengthInMilliseconds() const;
-      virtual int bitrate() const;
-      virtual int sampleRate() const;
-      virtual int channels() const;
+      int lengthInSeconds() const override;
+      int lengthInMilliseconds() const override;
+      int bitrate() const override;
+      int sampleRate() const override;
+      int channels() const override;
 
       int bitsPerSample() const;
       long long sampleCount() const;
 
     private:
-      Properties(const Properties &);
-      Properties &operator=(const Properties &);
-
       class PropertiesPrivate;
-      PropertiesPrivate *d;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
+      std::unique_ptr<PropertiesPrivate> d;
     };
-  }
-}
+  }  // namespace DSDIFF
+}  // namespace TagLib
 
 #endif
-

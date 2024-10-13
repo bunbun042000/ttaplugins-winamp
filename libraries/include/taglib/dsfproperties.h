@@ -1,6 +1,6 @@
 /***************************************************************************
-    copyright            : (C) 2013 by Stephen F. Booth
-    email                : me@sbooth.org
+    copyright           : (C) 2013-2023 Stephen F. Booth
+    email               : me@sbooth.org
  ***************************************************************************/
 
 /***************************************************************************
@@ -26,49 +26,33 @@
 #ifndef TAGLIB_DSFPROPERTIES_H
 #define TAGLIB_DSFPROPERTIES_H
 
+#include <memory>
+
+#include "taglib_export.h"
+#include "tbytevector.h"
 #include "audioproperties.h"
 
 namespace TagLib {
-
   namespace DSF {
-
-    class File;
-
-    //! An implementation of audio property reading for DSF
-
-    /*!
-     * This reads the data from a DSF stream found in the AudioProperties
-     * API.
-     */
-
-    class TAGLIB_EXPORT Properties : public TagLib::AudioProperties
-    {
+    //! An implementation of audio properties for DSF
+    class TAGLIB_EXPORT Properties : public AudioProperties {
     public:
-      /*!
-       * Create an instance of DSF::AudioProperties with the data read from the
-       * ByteVector \a data.
-       */
       Properties(const ByteVector &data, ReadStyle style);
+      ~Properties() override;
 
-      /*!
-       * Destroys this DSF::AudioProperties instance.
-        */
-      virtual ~Properties();
+      Properties(const Properties &) = delete;
+      Properties &operator=(const Properties &) = delete;
 
-      // Reimplementations.
-
-      virtual int length() const;
-      virtual int lengthInSeconds() const;
-      virtual int lengthInMilliseconds() const;
-      virtual int bitrate() const;
-      virtual int sampleRate() const;
-      virtual int channels() const;
+      int lengthInMilliseconds() const override;
+      int bitrate() const override;
+      int sampleRate() const override;
+      int channels() const override;
 
       int formatVersion() const;
       int formatID() const;
 
       /*!
-       * Channel type values: 1 = mono, 2 = stereo, 3 = 3 channels, 
+       * Channel type values: 1 = mono, 2 = stereo, 3 = 3 channels,
        * 4 = quad, 5 = 4 channels, 6 = 5 channels, 7 = 5.1 channels
        */
       int channelType() const;
@@ -77,16 +61,13 @@ namespace TagLib {
       int blockSizePerChannel() const;
 
     private:
-      Properties(const Properties &);
-      Properties &operator=(const Properties &);
-
       void read(const ByteVector &data);
 
       class PropertiesPrivate;
-      PropertiesPrivate *d;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
+      std::unique_ptr<PropertiesPrivate> d;
     };
-  }
-}
+  }  // namespace DSF
+}  // namespace TagLib
 
 #endif
-
