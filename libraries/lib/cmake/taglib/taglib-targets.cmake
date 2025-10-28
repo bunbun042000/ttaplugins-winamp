@@ -7,7 +7,7 @@ if(CMAKE_VERSION VERSION_LESS "2.8.12")
    message(FATAL_ERROR "CMake >= 2.8.12 required")
 endif()
 cmake_policy(PUSH)
-cmake_policy(VERSION 2.8.12...3.30)
+cmake_policy(VERSION 2.8.12...3.31)
 #----------------------------------------------------------------
 # Generated CMake target import file.
 #----------------------------------------------------------------
@@ -59,6 +59,7 @@ endif()
 add_library(TagLib::tag STATIC IMPORTED)
 
 set_target_properties(TagLib::tag PROPERTIES
+  INTERFACE_COMPILE_DEFINITIONS "TAGLIB_STATIC"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;${_IMPORT_PREFIX}/include/taglib"
   INTERFACE_LINK_LIBRARIES "ZLIB::ZLIB"
 )
@@ -67,6 +68,7 @@ set_target_properties(TagLib::tag PROPERTIES
 add_library(TagLib::tag_c STATIC IMPORTED)
 
 set_target_properties(TagLib::tag_c PROPERTIES
+  INTERFACE_COMPILE_DEFINITIONS "TAGLIB_STATIC"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include/taglib"
   INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:TagLib::tag>"
 )
