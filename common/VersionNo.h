@@ -25,7 +25,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 /**/MAJOR_VERSION 3
 #define /*
 !define /**/ /*\
-/**/MINOR_VERSION 72
+/**/MINOR_VERSION 73
 #define /*
 !define /**/ /*\
 /**/EXTENDED_VERSION 0
@@ -60,7 +60,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 #define PLUGIN_VERSION_WCHAR VERSION_WCHAR
 #define LIBTTA_VERSION_WCHAR L"libtta C++ Ver.2.3"
 
-#define PROJECT_URL_WCHAR L"<https://github.com/bunbun042000/ttaplugin-winamp>"
+#define PROJECT_URL_WCHAR L"<https://github.com/bunbun042000/ttaplugins-winamp>"
 #define ORIGINAL_CREADIT01 L"Plugin is written by Alexander Djourik, Pavel Zhilin and Anton Gorbunov.\n"
 #define ORIGINAL_CREADIT02 L"Copyright (c) 2003 Alexander Djourik.\n"
 #define ORIGINAL_CREADIT03 L"All rights reserved.\n"

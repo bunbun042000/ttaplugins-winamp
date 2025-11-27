@@ -1,4 +1,4 @@
-prefix=C:/home/bun/Documents/Visual Studio 2022/Projects/ttaplugins-winamp/libraries
+prefix=C:/home/bun/source/repos/bunbun042000/ttaplugins-winamp/libraries
 exec_prefix=${prefix}
 libdir=${prefix}/lib
 includedir=${prefix}/include

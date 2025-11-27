@@ -1,4 +1,4 @@
-/***************************************************************************
+﻿/***************************************************************************
     copyright            : (C) 2002 - 2008 by Scott Wheeler
     email                : wheeler@kde.org
  ***************************************************************************/
@@ -173,6 +173,20 @@ namespace TagLib {
       String genre() const override;
       unsigned int year() const override;
       unsigned int track() const override;
+      String stringYear() const;
+      String stringTrack() const;
+      String albumArtist() const;
+      String copyright() const;
+      String URI() const;
+      String words() const;
+      String composers() const;
+      String arrangements() const;
+      String origArtist() const;
+      String encEngineer() const;
+      String publisher() const;
+      String disc() const;
+      String BPM() const;
+      ByteVector albumArt(ID3v2::AttachedPictureFrame::Type arttype, String& mimetype);
 
       void setTitle(const String &s) override;
       void setArtist(const String &s) override;
@@ -181,38 +195,22 @@ namespace TagLib {
       void setGenre(const String &s) override;
       void setYear(unsigned int i) override;
       void setTrack(unsigned int i) override;
+      virtual void setAlbumArtist(const String& s);
+      virtual void setStringYear(const String& s);
+      virtual void setStringTrack(const String& s);
+      virtual void setCopyright(const String& s);
+      virtual void setURI(const String& s);
+      virtual void setWords(const String& s);
+      virtual void setComposers(const String& s);
+      virtual void setArrangements(const String& s);
+      virtual void setOrigArtist(const String& s);
+      virtual void setEncEngineer(const String& s);
+      virtual void setPublisher(const String& s);
+      virtual void setDisc(const String& s);
+      virtual void setBPM(const String& s);
+      virtual void setAlbumArt(const ByteVector& v, ID3v2::AttachedPictureFrame::Type arttype, String& mimetype);
 
-      virtual bool isEmpty() const override;
-
-      virtual String albumArtist() const;
-      virtual String stringYear() const;
-      virtual String stringTrack() const;
-      virtual String copyright() const;
-      virtual String URI() const;
-      virtual String words() const;
-      virtual String composers() const;
-      virtual String arrangements() const;
-      virtual String origArtist() const;
-      virtual String encEngineer() const;
-      virtual String publisher() const;
-      virtual String disc() const;
-      virtual String BPM() const;
-      virtual ByteVector albumArt(ID3v2::AttachedPictureFrame::Type arttype, String &mimetype);
-
-      virtual void setAlbumArtist(const String &s);
-      virtual void setStringYear(const String &s);
-      virtual void setStringTrack(const String &s);
-      virtual void setCopyright(const String &s);
-      virtual void setURI(const String &s);
-      virtual void setWords(const String &s);
-      virtual void setComposers(const String &s);
-      virtual void setArrangements(const String &s);
-      virtual void setOrigArtist(const String &s);
-      virtual void setEncEngineer(const String &s);
-      virtual void setPublisher(const String &s);
-      virtual void setDisc(const String &s);
-      virtual void setBPM(const String &s);
-      virtual void setAlbumArt(const ByteVector &v, ID3v2::AttachedPictureFrame::Type arttype, String &mimetype);
+      bool isEmpty() const override;
 
       /*!
        * Returns a pointer to the tag's header.
