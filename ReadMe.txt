@@ -1,4 +1,4 @@
-ttaplugins-winamp v3.73
+ttaplugins-winamp v3.74
 =====================================================
 
 *This plugin 
@@ -14,6 +14,9 @@ This plugin performs Winamp Ver.2.9 or newer and tested on Winamp Ver.5.9.2.
  Please copy in_tta.dll and enc_tta.dll to Plugins folder in Winamp.
 
 *Release Notes
+2025-12-19 3.74       Fix FileName variable doesn't hold the filename if valid tag is read in GetTagInfo()(in_tta.dll).
+                      Fix argument type of metadata from const wchar_t* to const char* on winampSetExtendedFileInfoW() and winampGetExtendedFileInfoW()(in_tta.dll).
+                      Change compiler to Visual Studio 2026 (Version 18.1.1)(in_tta.dll, enc_tta.dll)
 2025-11-27 3.73       Change upstream tablib master (based on 2025/11/24 21:57:09 Commit hash:9c042984d26af605a6fd1dac7f12bda05219fee7)(in_tta.dll)
                       Change compiler to Visual Studio 2026 (Version 18.0.2)(in_tta.dll, enc_tta.dll)
                       Change zlib from Version 1.2.11 to Version 1.3.1(in_tta.dll, enc_tta.dll)

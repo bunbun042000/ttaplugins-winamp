@@ -200,3 +200,4 @@ FakesAssemblies/
 *.diagsession
 *.db
 *.opendb
+*.settings

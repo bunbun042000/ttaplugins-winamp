@@ -25,7 +25,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 /**/MAJOR_VERSION 3
 #define /*
 !define /**/ /*\
-/**/MINOR_VERSION 73
+/**/MINOR_VERSION 74
 #define /*
 !define /**/ /*\
 /**/EXTENDED_VERSION 0
@@ -58,14 +58,16 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 #define COPYRIGHT_ENC_TTA    BASE_VERSION_CHAR " (C)" COPYRIGHT_YEARS " Yamagata Fumihiro. All right reserved."
 #define PLUGIN_VERSION_CHAR VERSION_CHAR
 #define PLUGIN_VERSION_WCHAR VERSION_WCHAR
-#define LIBTTA_VERSION_WCHAR L"libtta C++ Ver.2.3"
+#define LIBTTA_VERSION_CHAR "libtta v2.3"
+#define ENC_TTA_VERSION_CHAR VERSION_CHAR " (" LIBTTA_VERSION_CHAR ")"
+#define LIBTTA_VERSION_WCHAR L"libtta v2.3"
 
 #define PROJECT_URL_WCHAR L"<https://github.com/bunbun042000/ttaplugins-winamp>"
 #define ORIGINAL_CREADIT01 L"Plugin is written by Alexander Djourik, Pavel Zhilin and Anton Gorbunov.\n"
 #define ORIGINAL_CREADIT02 L"Copyright (c) 2003 Alexander Djourik.\n"
 #define ORIGINAL_CREADIT03 L"All rights reserved.\n"
 #define LIBTTA_ORIGINAL_CREADIT LIBTTA_VERSION_WCHAR L"Copyright(c) 1999 - 2015 Aleksander Djuric.All rights reserved.\n"
-#define CREADIT01 L"Modified by Yamagata Fumihiro, " COPYRIGHT_YEARS L"\n"
+#define CREADIT01 L"Modified by Yamagata Fumihiro, \n"
 #define CREADIT02 L"Copyright (C)" COPYRIGHT_YEARS L" Yamagata Fumihiro.\n"
 
 #define IN_TTA_PLUGIN_VERSION_CREADIT L"Winamp plug-in version " PLUGIN_VERSION_WCHAR L"\nbased on " LIBTTA_VERSION_WCHAR L"\n" PROJECT_URL_WCHAR
