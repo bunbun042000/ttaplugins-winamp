@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.12
+# Visual Studio Version 18
+VisualStudioVersion = 18.1.11304.174 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "in_tta", "in_tta\in_tta.vcxproj", "{67DE0204-5F5F-48A7-93F8-9D403EB9CEE0}"
 EndProject
@@ -12,6 +12,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "common", "common\common.vcx
 		{67DE0204-5F5F-48A7-93F8-9D403EB9CEE0} = {67DE0204-5F5F-48A7-93F8-9D403EB9CEE0}
 		{7B6322E9-14BD-4DC2-92B0-9EC0A1E8AA3A} = {7B6322E9-14BD-4DC2-92B0-9EC0A1E8AA3A}
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libtta", "libtta-cpp\libtta.vcxproj", "{B3DF599C-1C8F-451D-91E4-DD766210DA1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,9 +47,20 @@ Global
 		{B479CE23-6DCA-4CF3-A3CB-E9833F4BFC62}.Release|Win32.Build.0 = Release|Win32
 		{B479CE23-6DCA-4CF3-A3CB-E9833F4BFC62}.Release|x86.ActiveCfg = Release|Win32
 		{B479CE23-6DCA-4CF3-A3CB-E9833F4BFC62}.Release|x86.Build.0 = Release|Win32
+		{B3DF599C-1C8F-451D-91E4-DD766210DA1F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B3DF599C-1C8F-451D-91E4-DD766210DA1F}.Debug|Win32.Build.0 = Debug|Win32
+		{B3DF599C-1C8F-451D-91E4-DD766210DA1F}.Debug|x86.ActiveCfg = Debug|Win32
+		{B3DF599C-1C8F-451D-91E4-DD766210DA1F}.Debug|x86.Build.0 = Debug|Win32
+		{B3DF599C-1C8F-451D-91E4-DD766210DA1F}.Release|Win32.ActiveCfg = Release|Win32
+		{B3DF599C-1C8F-451D-91E4-DD766210DA1F}.Release|Win32.Build.0 = Release|Win32
+		{B3DF599C-1C8F-451D-91E4-DD766210DA1F}.Release|x86.ActiveCfg = Release|Win32
+		{B3DF599C-1C8F-451D-91E4-DD766210DA1F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE1C67E9-DB21-4EBE-8D4A-65A6D7358091}
 	EndGlobalSection
 	GlobalSection(Performance) = preSolution
 		HasPerformanceSessions = true

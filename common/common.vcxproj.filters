@@ -16,7 +16,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\ReadMe.ja.txt" />
-    <Text Include="..\lgpl.txt" />
     <Text Include="..\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>

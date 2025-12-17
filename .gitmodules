@@ -4,3 +4,7 @@
 [submodule "in_tta"]
 	path = in_tta
 	url = https://github.com/bunbun042000/in_tta.git
+[submodule "libtta-cpp"]
+	path = libtta-cpp
+	url = git@github.com:bunbun042000/libtta-cpp.git
+	branch = main

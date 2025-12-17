@@ -25,7 +25,7 @@ Unicode true
 !define PLUG_ALT "ttaplugins-winamp"
 !define IN_PLUG_FILE "in_tta"
 !define ENC_PLUG_FILE "enc_tta"
-;!define LIBTTA_DLL "libtta"
+!define LIBTTA_DLL "libtta"
 ;!define TAGLIB_DLL "tagd"
 
 ; use leet compression
@@ -41,7 +41,7 @@ OutFile "${PLUG_ALT}_debug.exe"
 ; OutFile "../_Installers/${PLUG_ALT}_debug.exe"
 
 ; license file
-LicenseData "../lgpl.txt"
+LicenseData "../COPYING.LESSER"
 
 ; The default installation directory
 InstallDir $PROGRAMFILES\Winamp
@@ -116,8 +116,8 @@ Section ""
   ; likely to apply otherwise just alter the path as needed
   File "..\Debug\${IN_PLUG_FILE}.dll"
   File "..\Debug\${ENC_PLUG_FILE}.dll"
-  SetOutPath "$INSTDIR"
-;  File "..\..\libraries_vc2017\bin\${LIBTTA_DLL}.dll"
+  SetOutPath "$INSTDIR\Shared"
+  File "..\Debug\${LIBTTA_DLL}.dll"
 ;  File "..\..\libraries\bin\${TAGLIB_DLL}.dll"
 
   SetOverwrite off

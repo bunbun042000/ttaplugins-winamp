@@ -122,7 +122,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="..\lgpl.txt" />
     <Text Include="..\ReadMe.ja.txt" />
     <Text Include="..\ReadMe.txt" />
   </ItemGroup>
