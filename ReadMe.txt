@@ -16,7 +16,8 @@ This plugin performs Winamp Ver.2.9 or newer and tested on Winamp Ver.5.9.2.
 2026-01-01 4.00       Change software license from LGPL2.1 to LGPL3(in_tta.dll, enc_tta.dll, libtta.dll).
                       Use original taglib library and implement additional function internally(in_tta.dll).
                       Change encode engine from internal to libtta-cpp-2.3 based shared library (DLL)(enc_tta.dll).
-                      Change libtta-cpp from static library to shared library (DLL)(libtta.dll). 
+                      Change libtta-cpp from static library to shared library (DLL)(in_tta.dll). 
+                      Commonly use DLL libtta-cpp both in_tta and enc_tta(in_tta.dll, enc_tta.dll).
                       Change taglib master(2025/11/24 21:57:09 Commit hash:9c042984d26af605a6fd1dac7f12bda05219fee7)(in_tta.dll).
                       Update NSIS script about download/install VC redistributable.
 2025-12-19 3.74       Fix FileName variable doesn't hold the filename if valid tag is read in GetTagInfo()(in_tta.dll).
