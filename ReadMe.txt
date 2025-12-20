@@ -7,7 +7,7 @@ TTA plug-in ver 3.5 for Winamp 2,5.
 Add read/write metadata (include album art) for MediaLibray using
 taglib(https://github.com/taglib/taglib).
 Additionally, tta encode plugin is included.
-This plugin performs Winamp Ver.2.9 or newer and tested on Winamp Ver.5.9.2.
+This plugin performs Winamp Ver.5.66 or newer and tested on Winamp Ver.5.9.2.
 
 *Install
  Please copy in_tta.dll and enc_tta.dll to Plugins folder and libtta.dll to Shared folder in Winamp.
