@@ -203,3 +203,7 @@ FakesAssemblies/
 *.db
 *.opendb
 *.settings
+*.tlog/
+*.res
+*.vcxproj.FileListAbsolute.txt
+*.lib.recipe
