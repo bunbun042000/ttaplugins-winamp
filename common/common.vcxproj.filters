@@ -19,8 +19,10 @@
     <Text Include="..\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\NSIS\ttaplugins-winamp_installer.nsi" />
-    <None Include="..\NSIS\ttaplugins-winamp_installer_debug.nsi" />
+    <None Include="..\NSIS\ttaplugins-winamp_installer-x64.nsi" />
+    <None Include="..\NSIS\ttaplugins-winamp_installer_debug-x64.nsi" />
+    <None Include="..\NSIS\ttaplugins-winamp_installer-win32.nsi" />
+    <None Include="..\NSIS\ttaplugins-winamp_installer_debug-win32.nsi" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VersionNo.h">

@@ -79,8 +79,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>"$(ProgramFiles) (x86)\NSIS\makensis" /V1 "$(SolutionDir)NSIS\ttaplugins-winamp_installer_debug.nsi"
-"$(SolutionDir)NSIS\$(SolutionName)_debug.exe" /S</Command>
+      <Command>"$(ProgramFiles) (x86)\NSIS\makensis" /V1 "$(SolutionDir)NSIS\ttaplugins-winamp_installer_debug-$(Platform).nsi"
+$(SolutionDir)NSIS\$(SolutionName)_debug-$(Platform).exe /S</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -93,8 +93,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>"$(ProgramFiles) (x86)\NSIS\makensis" /V1 "$(SolutionDir)NSIS\ttaplugins-winamp_installer_debug.nsi"
-"$(SolutionDir)NSIS\$(SolutionName)_debug.exe" /S</Command>
+      <Command>"$(ProgramFiles) (x86)\NSIS\makensis" /V1 "$(SolutionDir)NSIS\ttaplugins-winamp_installer_debug-$(Platform).nsi"
+$(SolutionDir)NSIS\$(SolutionName)_debug-$(Platform).exe /S</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -130,8 +130,10 @@
     <Text Include="..\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\NSIS\ttaplugins-winamp_installer.nsi" />
-    <None Include="..\NSIS\ttaplugins-winamp_installer_debug.nsi" />
+    <None Include="..\NSIS\ttaplugins-winamp_installer-win32.nsi" />
+    <None Include="..\NSIS\ttaplugins-winamp_installer-x64.nsi" />
+    <None Include="..\NSIS\ttaplugins-winamp_installer_debug-win32.nsi" />
+    <None Include="..\NSIS\ttaplugins-winamp_installer_debug-x64.nsi" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VersionNo.h" />
