@@ -12,14 +12,7 @@
 
 # Build results
 common/[Dd]ebug/
-/[Dd]ebug/
-[Dd]ebugPublic/
 common/[Rr]elease/
-/[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-build/
 bld/
 [Bb]in/
 [Oo]bj/
