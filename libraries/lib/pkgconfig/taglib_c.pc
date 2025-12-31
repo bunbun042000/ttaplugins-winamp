@@ -1,4 +1,4 @@
-prefix=C:/home/bun/source/repos/bunbun042000/ttaplugins-winamp/libraries
+prefix=D:/home/bun/source/repos/bunbun042000/ttaplugins-winamp/libraries
 exec_prefix=${prefix}
 libdir=${prefix}/lib
 includedir=${prefix}/include

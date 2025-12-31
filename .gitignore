@@ -11,13 +11,8 @@
 *.userprefs
 
 # Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-build/
+common/[Dd]ebug/
+common/[Rr]elease/
 bld/
 [Bb]in/
 [Oo]bj/
@@ -201,3 +196,7 @@ FakesAssemblies/
 *.db
 *.opendb
 *.settings
+*.tlog/
+*.res
+*.vcxproj.FileListAbsolute.txt
+*.lib.recipe

@@ -1,4 +1,4 @@
-﻿/***************************************************************************
+/***************************************************************************
     copyright            : (C) 2002 - 2008 by Scott Wheeler
     email                : wheeler@kde.org
  ***************************************************************************/
@@ -35,7 +35,6 @@
 #include "tag.h"
 #include "id3v2.h"
 #include "id3v2framefactory.h"
-#include "attachedpictureframe.h"
 
 namespace TagLib {
 
@@ -173,20 +172,6 @@ namespace TagLib {
       String genre() const override;
       unsigned int year() const override;
       unsigned int track() const override;
-      String stringYear() const;
-      String stringTrack() const;
-      String albumArtist() const;
-      String copyright() const;
-      String URI() const;
-      String words() const;
-      String composers() const;
-      String arrangements() const;
-      String origArtist() const;
-      String encEngineer() const;
-      String publisher() const;
-      String disc() const;
-      String BPM() const;
-      ByteVector albumArt(ID3v2::AttachedPictureFrame::Type arttype, String& mimetype);
 
       void setTitle(const String &s) override;
       void setArtist(const String &s) override;
@@ -195,20 +180,6 @@ namespace TagLib {
       void setGenre(const String &s) override;
       void setYear(unsigned int i) override;
       void setTrack(unsigned int i) override;
-      virtual void setAlbumArtist(const String& s);
-      virtual void setStringYear(const String& s);
-      virtual void setStringTrack(const String& s);
-      virtual void setCopyright(const String& s);
-      virtual void setURI(const String& s);
-      virtual void setWords(const String& s);
-      virtual void setComposers(const String& s);
-      virtual void setArrangements(const String& s);
-      virtual void setOrigArtist(const String& s);
-      virtual void setEncEngineer(const String& s);
-      virtual void setPublisher(const String& s);
-      virtual void setDisc(const String& s);
-      virtual void setBPM(const String& s);
-      virtual void setAlbumArt(const ByteVector& v, ID3v2::AttachedPictureFrame::Type arttype, String& mimetype);
 
       bool isEmpty() const override;
 
