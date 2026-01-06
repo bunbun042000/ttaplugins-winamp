@@ -1,4 +1,4 @@
-﻿ttaplugins-winamp v4.00
+﻿ttaplugins-winamp v4.01
 =====================================================
 
 *このプラグインは
@@ -14,6 +14,7 @@ Winamp Ver.5.66以降に対応しており，Winamp Ver.5.9.2にて動作確認�
  WinampのフォルダにあるPluginsフォルダにin_tta.dllとenc_tta.dllを，Sharedフォルダにlibtta.dllをコピーしてください。
 
 *更新履歴
+2025-01-07 4.01       不必要なシークテーブルの書き飛ばしを修正(libtta.dll)
 2025-01-01 4.00       ソフトウエアライセンスをLGPL2.1からLGPL3に変更(in_tta.dll, enc_tta.dll, libtta.dll)
                       taglibをオリジナルのものを用いる事にし，必要な変更を内部で実装する形に変更(in_tta.dll).
                       エンコードエンジンを内部実装からlibtta-cpp-2.3ベースのDLLを用いる形に変更(enc_tta.dll).

@@ -200,3 +200,4 @@ FakesAssemblies/
 *.res
 *.vcxproj.FileListAbsolute.txt
 *.lib.recipe
+/Win32/*

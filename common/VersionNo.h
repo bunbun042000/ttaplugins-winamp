@@ -26,7 +26,7 @@ If not, see <https://www.gnu.org/licenses/>.
 /**/MAJOR_VERSION 4
 #define /*
 !define /**/ /*\
-/**/MINOR_VERSION 00
+/**/MINOR_VERSION 01
 #define /*
 !define /**/ /*\
 /**/EXTENDED_VERSION 0

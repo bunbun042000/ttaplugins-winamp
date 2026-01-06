@@ -1,4 +1,4 @@
-﻿ttaplugins-winamp v4.00
+﻿ttaplugins-winamp v4.01
 =====================================================
 
 *This plugin 
@@ -13,6 +13,7 @@ This plugin performs Winamp Ver.5.66 or newer and tested on Winamp Ver.5.9.2.
  Please copy in_tta.dll and enc_tta.dll to Plugins folder and libtta.dll to Shared folder in Winamp.
 
 *Release Notes
+2025-01-07 4.01       Fix unnecessary skip writing on seek table(libtta.dll).
 2026-01-01 4.00       Change software license from LGPL2.1 to LGPL3(in_tta.dll, enc_tta.dll, libtta.dll).
                       Use original taglib library and implement additional function internally(in_tta.dll).
                       Change encode engine from internal to libtta-cpp-2.3 based shared library (DLL)(enc_tta.dll).
